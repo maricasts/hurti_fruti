@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Cadastro realizado com sucesso!";
-        header("Location: sucesso.php");  // Redireciona para a página de sucesso
+        header("Location: home.php");  // Redireciona para a página de sucesso
         exit();
     } else {
         echo "Erro ao cadastrar: " . $stmt->error;
