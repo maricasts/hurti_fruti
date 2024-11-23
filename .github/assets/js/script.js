@@ -10,10 +10,11 @@ document.getElementById('login-form')?.addEventListener('submit', function(event
 
 document.getElementById('cadastro-form')?.addEventListener('submit', function(event) {
     const name = document.getElementById('name').value;
+    const arroba = document.getElementById('arroba').value; // Verificação adicionada
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    if (!name || !email || !password) {
+    if (!name || !arroba || !email || !password) { // Verificação do username
         alert("Por favor, preencha todos os campos.");
         event.preventDefault();
     }

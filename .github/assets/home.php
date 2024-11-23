@@ -2,14 +2,14 @@
 // Iniciar a sessão
 session_start();
 
-// Verificar se o usuário está logado (se a sessão 'username' existe)
+// Verificar se o usuário está logado (se a sessão 'email' existe)
 if (!isset($_SESSION['email'])) {
     // Se o usuário não estiver logado, redirecionar para a página de login
     header("Location: login.php");
     exit();  // Certifique-se de que o script pare de ser executado após o redirecionamento
 }
 
-// Se o usuário estiver logado, recuperar o nome de usuário
+// Se o usuário estiver logado, recuperar o email
 $email = $_SESSION['email'];
 ?>
 
@@ -19,7 +19,7 @@ $email = $_SESSION['email'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">  <!-- Corrigido para usar o caminho correto -->
 </head>
 <body>
     <div class="container">

@@ -28,9 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verificar se a senha fornecida é correta
         if (password_verify($senha, $usuario['senha'])) {
-            echo "Login bem-sucedido!";
-            // Aqui você pode redirecionar o usuário para a página inicial ou uma página protegida
-            // header("Location: dashboard.php");
+            session_start(); // Iniciar a sessão
+            $_SESSION['email'] = $email; // Armazenar o email na sessão
+            header("Location: home.php"); // Redirecionar para a página inicial
+            exit();
         } else {
             echo "Senha incorreta.";
         }

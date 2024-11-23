@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $nome, $arroba, $email, $senha_criptografada);
 
     if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
-        header("Location: home.php");  // Redireciona para a página de sucesso
+        // Redireciona para a página de sucesso
+        header("Location: home.php");
         exit();
     } else {
         echo "Erro ao cadastrar: " . $stmt->error;
