@@ -1,31 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="auth-form-container">
-        <h2>Cadastro</h2>
-        <form action="cadastro_processo.php" method="POST" id="cadastro-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+ <head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+     Cadastro
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+     body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fbdada;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-            <label for="arroba">username:</label>
-            <input type="text" id="arroba" name="arroba" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" name="submit" id="submit">Cadastrar</button>
-        </form>
-        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
-    </div>
-    <script src="assets/js/script.js"></script>
-</body>
+        .auth-form-container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .auth-form-container h2 {
+            margin-bottom: 20px;
+            color: #ff3d3d;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .auth-form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: left;
+        }
+        .auth-form-container input[type="text"],
+        .auth-form-container input[type="email"],
+        .auth-form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .auth-form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff3d3d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .auth-form-container button:hover {
+            background-color: #e63636;
+        }
+        .auth-form-container p {
+            margin-top: 10px;
+            color: #333;
+        }
+        .auth-form-container a {
+            color: #ff3d3d;
+            text-decoration: none;
+        }
+        .auth-form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <div class="auth-form-container">
+   <h2>
+    Cadastro
+   </h2>
+   <form action="cadastro_processo.php" id="cadastro-form" method="POST">
+    <label for="name">
+     Nome:
+    </label>
+    <input id="name" name="name" required="" type="text"/>
+    <label for="arroba">
+     username:
+    </label>
+    <input id="arroba" name="arroba" required="" type="text"/>
+    <label for="email">
+     Email:
+    </label>
+    <input id="email" name="email" required="" type="email"/>
+    <label for="password">
+     Senha:
+    </label>
+    <input id="password" name="password" required="" type="password"/>
+    <button id="submit" name="submit" type="submit">
+     Cadastrar
+    </button>
+   </form>
+   <p>
+    Já tem uma conta?
+    <a href="login.html">
+     Faça login
+    </a>
+   </p>
+  </div>
+  <script src="assets/js/script.js">
+  </script>
+ </body>
 </html>
