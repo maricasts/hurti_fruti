@@ -1,19 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hurti</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Bem-vindo ao nosso site!</h1>
-        <div class="auth-options">
-            <a href="login.html">Login</a>
-            <a href="cadastro.html">Cadastro</a>
-        </div>
+ <head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Hurti Fruti
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8d7da;
+        }
+  </style>
+ </head>
+ <body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full md:w-4/5">
+   <header class="flex flex-col md:flex-row items-center justify-between p-6">
+    <div class="flex items-center mb-4 md:mb-0">
+     <div class="rounded-full flex items-center justify-center">
+        <span class="ml-3 text-xl font-bold">
+            FRUTIS
+           </span>
+     </div>
     </div>
-    <script src="assets/js/script.js"></script>
-</body>
+    <nav class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+     <a class="text-gray-600 hover:text-gray-900" href="index.html">
+      Home
+     </a>
+     <a class="text-gray-600 hover:text-gray-900" href="#">
+      Novas Frutinhas
+     </a>
+     <a class="text-gray-600 hover:text-gray-900" href="#">
+      Sobre
+     </a>
+     <a class="text-gray-600 hover:text-gray-900" href="#">
+      Fale conosco!
+     </a>
+     <a href="login.php">
+         <button class="px-4 py-2 border border-pink-500 text-pink-500 rounded hover:bg-pink-500 hover:text-white" href="#login.php">
+          Entrar
+         </button>
+        </a>
+     <a href="cadastro.html">
+         <button class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">
+          Cadastre-se
+         </button>
+        </a>
+    </nav>
+   </header>
+   <main class="flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+    <div class="max-w-md mb-6 md:mb-0">
+     <h1 class="text-3xl md:text-4xl font-bold mb-4">
+      Bem-vindo ao nosso Hurti Fruti!
+     </h1>
+     <p class="text-gray-600 mb-6">
+        O Hurti Fruti oferece uma seleção de novas frutas para você explorar e saborear. Com uma variedade incrível, cada fruta foi escolhida para trazer frescor e sabor únicos ao seu dia. Do exótico ao tradicional, há opções para todos os gostos e necessidades!
+     </p>
+     <button class="px-6 py-3 bg-pink-500 text-white rounded hover:bg-pink-600">
+      Explore novos sabores!
+      <i class="fas fa-arrow-right ml-2">
+      </i>
+     </button>
+    </div>
+   </main>
+   <footer class="flex justify-center space-x-4 p-6">
+    <a class="text-pink-500 hover:text-pink-600" href="#">
+     <i class="fab fa-facebook-f">
+     </i>
+    </a>
+    <a class="text-pink-500 hover:text-pink-600" href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a class="text-pink-500 hover:text-pink-600" href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a class="text-pink-500 hover:text-pink-600" href="#">
+     <i class="fab fa-tumblr">
+     </i>
+    </a>
+   </footer>
+  </div>
+  <script src="assets/js/script.js">
+  </script>
+ </body>
 </html>
