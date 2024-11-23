@@ -6,7 +6,7 @@ $password = "";          // sua senha do MySQL (se houver)
 $dbname = "hurti"; // nome do banco de dados
 
 // Criar a conexão
-$connect = new mysqli($host, $user, $password, $dbname);
+$conn = new mysqli($host, $user, $password, $dbname);
 
 // Verificar a conexão
 if ($conn->connect_error) {
