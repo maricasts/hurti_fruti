@@ -86,7 +86,7 @@ if (!isset($_SESSION['email'])) {
     </style>
 </head>
 <body class="flex flex-col items-center">
-    <h1>Bem-vindo, <?php echo htmlspecialchars($email); ?>!</h1>
+    <h1>Bem-vindo, <?php echo htmlspecialchars($_SESSION['email']); ?>!</h1>
     <!-- Header -->
     <header class="bg-pink-500 text-white w-full p-4">
     </header>
