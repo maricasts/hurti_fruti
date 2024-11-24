@@ -36,8 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Verificar se a senha fornecida é correta
             if (password_verify($senha, $usuario['senha'])) {
                 // Login bem-sucedido
-                $_SESSION['usuario_id'] = $usuario['id']; // Armazenar o ID do usuário na sessão
-                $_SESSION['nome'] = $usuario['nome']; // Armazenar o nome do usuário na sessão
+                $_SESSION['email'] = $email; // Armazenar o email na sessão
                 header('Location: home.php'); // Redirecionar para a página inicial
                 exit();
             } else {
@@ -51,12 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Fechar a conexão
     $stmt->close();
     $conn->close();
-}
-?>
+}?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
- <head>
+<head>
   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -139,15 +136,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         ?>
    <form action="login.php" method="POST">
-    <label for="email" class="custom-cursor-default-hover">
+    <label for="email" class="custom-cursor-default-hover" required>
      E-mail:
     </label>
-    <input id="email" name="email" required="" type="email"/>
-    <label for="password" class="custom-cursor-default-hover">
+    <input id="email" name="email" type="email" required/>
+    <label for="password" class="custom-cursor-default-hover" required>
      Senha:
     </label>
-    <input id="password" name="password" required="" type="password"/>
-    <button type="submit" id="submit">
+    <input id="password" name="password" type="password" required/>
+    <button type="submit">
      Entrar
     </button>
    </form>
